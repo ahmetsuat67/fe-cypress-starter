@@ -8,8 +8,8 @@ const Navbar = () => {
   
   return (
     <Nav>
-      <Logo onClick={()=>setIsOpen(false)} to="/home">
-        <i>{`<Anthony/>`}</i>
+      <Logo  onClick={()=>setIsOpen(false)} to="/home">
+        <i data-test='homeLogo'>{`<Anthony/>`}</i>
         <span >recipe</span>
       </Logo>
       
@@ -19,7 +19,7 @@ const Navbar = () => {
         <span/>
       </Hamburger>
       <Menu hamburOpen={isOpen}>
-        <MenuLink to="/about" onClick={()=>setIsOpen(!isOpen)}>About</MenuLink>
+        <MenuLink data-test='homeAbout' to="/about" onClick={()=>setIsOpen(!isOpen)}>About</MenuLink>
         
         <A href="https://github.com/anthonyharold67" target="_blank">
           Github

@@ -11,8 +11,8 @@ const Form = ({ setQuery, getData, mealTypes, setMeal }) => {
   }
   return (
     <FormContainer onSubmit={handleSubmit}>
-      <FoodInput type="text" placeholder="Search" onChange={(e)=>setQuery(e.target.value)} />
-      <Button type="submit" >Search</Button> 
+      <FoodInput data-test='homeSearch' type="text" placeholder="Search" onChange={(e)=>setQuery(e.target.value)} />
+      <Button data-test='homeSearchBtn' type="submit" >Search</Button> 
       <Select name="mealTypes" id="mealTypes" onChange={(e)=>setMeal(e.target.value)}>
         
         {mealTypes.map((meal, index) => {
